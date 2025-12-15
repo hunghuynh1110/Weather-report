@@ -2,11 +2,7 @@ import { Box, Typography, Button } from "@mui/material";
 import React from "react";
 
 import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 
 const Search = styled("div")(({ theme }) => ({
@@ -16,12 +12,7 @@ const Search = styled("div")(({ theme }) => ({
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(1),
-    width: "auto",
-  },
+  width: "60%",
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
@@ -47,7 +38,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 function SearchBar() {
   return (
-    <Box style={{ display: "flex", gap: "10px", border: "1px solid white" }}>
+    <Box
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+
+        gap: "10px",
+      }}
+    >
       <Search>
         <SearchIconWrapper>
           <SearchIcon />
@@ -69,7 +68,17 @@ function SearchBar() {
 const SearchSection = () => {
   return (
     <Box>
-      <Typography variant="h2">How's the sky looking today?</Typography>
+      <Typography
+        variant="h3"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          padding: "30px",
+        }}
+      >
+        How's the sky looking today?
+      </Typography>
       <SearchBar />
     </Box>
   );
