@@ -6,6 +6,9 @@
 
 body {
   font-family: var(--font-sans);
+  background-color: #02012b;
+  color: white;
+  margin: 50px;
 }
 
 h1,
